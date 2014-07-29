@@ -1,0 +1,7 @@
+C:\temp\TegrityConversion-master\TegrityConversion-master\CodeSamples\PanoptoCodeSamples\UserManagementExample\bin\Debug\UserManagementExample.exe.config
+C:\src\Panopto\Active\Panopto\External\UserManagement\UserManagementExample\bin\Debug\UserManagementExample.exe.config
+C:\src\Panopto\Active\Panopto\External\UserManagement\UserManagementExample\obj\Debug\UserManagementExample.csprojResolveAssemblyReference.cache
+C:\src\Panopto\Active\Panopto\External\UserManagement\UserManagementExample\bin\Debug\UserManagementExample.exe
+C:\src\Panopto\Active\Panopto\External\UserManagement\UserManagementExample\bin\Debug\UserManagementExample.pdb
+C:\src\Panopto\Active\Panopto\External\UserManagement\UserManagementExample\obj\Debug\UserManagementExample.exe
+C:\src\Panopto\Active\Panopto\External\UserManagement\UserManagementExample\obj\Debug\UserManagementExample.pdb

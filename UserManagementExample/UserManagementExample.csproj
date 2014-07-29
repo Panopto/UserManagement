@@ -1,0 +1,210 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{10DB6997-7C37-4EB3-BBCC-0CFD31E5EC7C}</ProjectGuid>
+    <OutputType>Exe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>UserManagementExample</RootNamespace>
+    <AssemblyName>UserManagementExample</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.DirectoryServices.AccountManagement" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.ServiceModel" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Service References\PanoptoAccessManagement\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+    <Compile Include="Service References\PanoptoUserManagement\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+    <Compile Include="Service References\PanoptoSessionManagement\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+    <None Include="Service References\PanoptoAccessManagement\AccessManagement.wsdl" />
+    <None Include="Service References\PanoptoAccessManagement\AccessManagement.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\PanoptoAccessManagement\AccessManagement1.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\PanoptoAccessManagement\AccessManagement2.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\PanoptoAccessManagement\AccessManagement3.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\PanoptoAccessManagement\UserManagementExample.PanoptoAccessManagement.FolderAccessDetails.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\PanoptoAccessManagement\UserManagementExample.PanoptoAccessManagement.GroupAccessDetails.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\PanoptoAccessManagement\UserManagementExample.PanoptoAccessManagement.SessionAccessDetails.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\PanoptoAccessManagement\UserManagementExample.PanoptoAccessManagement.UserAccessDetails.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\PanoptoSessionManagement\UserManagementExample.PanoptoSessionManagement.Folder.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\PanoptoSessionManagement\UserManagementExample.PanoptoSessionManagement.ListFoldersResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\PanoptoSessionManagement\UserManagementExample.PanoptoSessionManagement.ListNotesResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\PanoptoSessionManagement\UserManagementExample.PanoptoSessionManagement.ListSessionsResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\PanoptoSessionManagement\UserManagementExample.PanoptoSessionManagement.Note.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\PanoptoSessionManagement\UserManagementExample.PanoptoSessionManagement.RecorderDownloadUrlResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\PanoptoSessionManagement\UserManagementExample.PanoptoSessionManagement.Session.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\PanoptoUserManagement\UserManagement.wsdl" />
+    <None Include="Service References\PanoptoUserManagement\UserManagement.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\PanoptoUserManagement\UserManagement1.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\PanoptoUserManagement\UserManagement2.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\PanoptoUserManagement\UserManagement3.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\PanoptoUserManagement\UserManagementExample.PanoptoUserManagement.Group.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\PanoptoUserManagement\UserManagementExample.PanoptoUserManagement.ListGroupsResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\PanoptoUserManagement\UserManagementExample.PanoptoUserManagement.ListUsersResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\PanoptoUserManagement\UserManagementExample.PanoptoUserManagement.User.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\PanoptoSessionManagement\SessionManagement.wsdl" />
+    <None Include="Service References\PanoptoSessionManagement\SessionManagement.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\PanoptoSessionManagement\SessionManagement1.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\PanoptoSessionManagement\SessionManagement2.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\PanoptoSessionManagement\SessionManagement3.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\PanoptoSessionManagement\SessionManagement4.xsd">
+      <SubType>Designer</SubType>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadata Include="Service References\" />
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadataStorage Include="Service References\PanoptoAccessManagement\" />
+    <WCFMetadataStorage Include="Service References\PanoptoUserManagement\" />
+    <WCFMetadataStorage Include="Service References\PanoptoSessionManagement\" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\PanoptoAccessManagement\configuration91.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\PanoptoAccessManagement\configuration.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\PanoptoAccessManagement\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\PanoptoUserManagement\configuration91.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\PanoptoUserManagement\configuration.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\PanoptoUserManagement\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\PanoptoSessionManagement\SessionManagement.disco" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\PanoptoSessionManagement\configuration91.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\PanoptoSessionManagement\configuration.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\PanoptoSessionManagement\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
